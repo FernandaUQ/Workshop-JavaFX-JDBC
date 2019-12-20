@@ -26,7 +26,7 @@
       </ToolBar>
       <TableView fx:id="tableViewDepartment" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn fx:id="tableColumnId" minWidth="0.0" prefWidth="83.0" text="ID" />
+          <TableColumn fx:id="tableColumnId" minWidth="0.0" prefWidth="83.0" text="Id" />
           <TableColumn fx:id="tableColumnName" prefWidth="67.0" text="Name" />
         </columns>
       </TableView>

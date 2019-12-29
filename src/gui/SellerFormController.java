@@ -125,12 +125,13 @@ public class SellerFormController implements Initializable {
 	}
 
 	private Seller getFormData() {
+
 		Seller obj = new Seller();
 
 		ValidationException exception = new ValidationException("Validation error");
 
 		obj.setId(Utils.tryParsetoInt(txtid.getText()));
-
+		
 		if (txtname.getText() == null || txtname.getText().trim().equals("")) {
 			exception.addError("name", "Field can't be empty");
 		}
@@ -186,6 +187,7 @@ public class SellerFormController implements Initializable {
 		if (entity == null) {
 			throw new IllegalStateException("Entity was null");
 		}
+		txtid.setText(String.valueOf(entity.getId()));
 		txtname.setText(entity.getName());
 		txtEmail.setText(entity.getEmail());
 		Locale.setDefault(Locale.US);
